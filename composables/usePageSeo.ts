@@ -10,9 +10,11 @@ interface SeoOptions {
 export function usePageSeo(options: SeoOptions = {}) {
   const route = useRoute()
 
-  const title = options.title ? `${options.title} · ${site.name}` : site.name
+  const title = options.title ? `${options.title} · ${site.name}` : site.longTitle
   const description = options.description || site.description
-  const url = `${site.siteUrl}${route.path}`
+  // Ensure trailing slash for canonical consistency (live site 301s to trailing slash)
+  const pathWithSlash = route.path.endsWith('/') ? route.path : route.path + '/'
+  const url = `${site.siteUrl}${pathWithSlash}`
 
   useSeoMeta({
     title,
@@ -21,7 +23,9 @@ export function usePageSeo(options: SeoOptions = {}) {
     ogDescription: description,
     ogType: 'website',
     ogUrl: url,
+    ogImage: site.ogImageUrl,
     twitterCard: 'summary_large_image',
+    twitterImage: site.ogImageUrl,
   })
 
   useHead({

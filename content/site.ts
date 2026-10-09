@@ -1,9 +1,11 @@
 export const site = {
   name: 'MCADD',
-  siteUrl: 'https://mcadd-research.github.io/MCADD',
+  longTitle: 'MCADD — medium-chain acyl-CoA dehydrogenase deficiency, explained',
+  siteUrl: 'https://mcadd-research.github.io',
+  ogImageUrl: 'https://mcadd-research.github.io/og-image.png',
   description:
     'An evidence-based guide to medium-chain acyl-CoA dehydrogenase deficiency (MCADD): understanding the disease, diagnosis, daily management, emergencies, and the latest research.',
-  contentLastVerified: '2026-08-21',
+  contentLastVerified: '2026-10-09',
   knowledgeBaseDate: '2026-08-21',
   emergencyNumberNote: 'Call your local emergency number (e.g. 911, 112, 999).',
 } as const
