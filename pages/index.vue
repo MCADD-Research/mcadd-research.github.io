@@ -13,7 +13,7 @@ usePageSeo({
     '@type': 'WebSite',
     name: site.name,
     description: site.description,
-    url: site.siteUrl,
+    url: site.siteUrl + '/',
     about: {
       '@type': 'MedicalCondition',
       name: 'Medium-chain acyl-CoA dehydrogenase deficiency',

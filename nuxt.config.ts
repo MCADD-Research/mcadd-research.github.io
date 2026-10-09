@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     baseURL,
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'MCADD',
+      title: 'MCADD — medium-chain acyl-CoA dehydrogenase deficiency, explained',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,6 +39,7 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.NUXT_SITE_URL || 'https://mcadd-research.github.io',
+    trailingSlash: true,
   },
 
   sitemap: {

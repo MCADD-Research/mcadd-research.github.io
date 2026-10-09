@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mcadd-research.github.io/MCADD/sitemap.xml
+Sitemap: https://mcadd-research.github.io/sitemap.xml
